@@ -1,5 +1,8 @@
+from src.alunos_artigos import run as gerar_artigos_com_alunos
+
+
 def main():
-    print("Hello from etl-rpvmm!")
+    gerar_artigos_com_alunos()
 
 
 if __name__ == "__main__":
