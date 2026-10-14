@@ -1,0 +1,263 @@
+[
+  {
+    "name": "Ana Carolina Lorena",
+    "institution": "ITA",
+    "area": "Aprendizado de máquina / Mineração de dados",
+    "email": "aclorena@ita.br",
+    "lattes": "http://lattes.cnpq.br/3451628262694747",
+    "lattes_id": "3451628262694747",
+    "lattes_html": null
+  },
+  {
+    "name": "Carlos Henrique Costa Ribeiro",
+    "institution": "ITA",
+    "area": "Inteligência Artificial",
+    "email": "carlos@ita.br",
+    "lattes": "http://lattes.cnpq.br/3754241050455395",
+    "lattes_id": "3754241050455395",
+    "lattes_html": null
+  },
+  {
+    "name": "Denise Beatriz Teixeira Pinto do Areal Ferrari",
+    "institution": "ITA",
+    "area": "Probabilidade e Estatística / Métodos Quantitativos",
+    "email": "denise@ita.br",
+    "lattes": "http://lattes.cnpq.br/2386080698503541",
+    "lattes_id": "2386080698503541",
+    "lattes_html": null
+  },
+  {
+    "name": "Elton Felipe Sbruzzi",
+    "institution": "ITA",
+    "area": "Finanças Computacionais",
+    "email": "elton@ita.br",
+    "lattes": "http://lattes.cnpq.br/0026358605322965",
+    "lattes_id": "0026358605322965",
+    "lattes_html": null
+  },
+  {
+    "name": "Filipe Alves Neto Verri",
+    "institution": "UNIFESP",
+    "area": "Ciência de Dados / Aprendizado de Máquinas",
+    "email": "filipe.verri@institutocurvelo.org.br",
+    "lattes": "http://lattes.cnpq.br/0145582312635382",
+    "lattes_id": "0145582312635382",
+    "lattes_html": null
+  },
+  {
+    "name": "Juliana Garcia Cespedes",
+    "institution": "UNIFESP",
+    "area": "Ciência de Dados / Aprendizado de Máquinas",
+    "email": "jcespedes@unifesp.br",
+    "lattes": "http://lattes.cnpq.br/0145582312635382",
+    "lattes_id": "0145582312635382",
+    "lattes_html": null
+  },
+  {
+    "name": "Mariá Cristina Vasconcelos Nascimento Rosset",
+    "institution": "ITA",
+    "area": "Teoria dos Grafos / Metaheurísticas",
+    "email": "maria.nascimento@gp.ita.br",
+    "lattes": "http://lattes.cnpq.br/1010810293243435",
+    "lattes_id": "1010810293243435",
+    "lattes_html": null
+  },
+  {
+    "name": "Mauri Aparecido de Oliveira",
+    "institution": "ITA",
+    "area": "Métodos Quantitativos",
+    "email": "mauri@ita.br",
+    "lattes": "http://lattes.cnpq.br/4663153865292835",
+    "lattes_id": "4663153865292835",
+    "lattes_html": null
+  },
+  {
+    "name": "Michel Carlo Rodrigues Leles",
+    "institution": "UFSJ",
+    "area": "Mineração de Dados",
+    "email": "mleles@ufsj.edu.br",
+    "lattes": "http://lattes.cnpq.br/5512914843540140",
+    "lattes_id": "5512914843540140",
+    "lattes_html": null
+  },
+  {
+    "name": "Paulo Andre Lima de Castro",
+    "institution": "ITA",
+    "area": "Sistemas Multiagentes, Agent-based Computational Economics, Inteligência Artificial",
+    "email": "pauloac@ita.br",
+    "lattes": "http://lattes.cnpq.br/2137986175572481",
+    "lattes_id": "2137986175572481",
+    "lattes_html": null
+  },
+  {
+    "name": "PauloMarcelo Tasinaffo",
+    "institution": "ITA",
+    "area": "Inteligência Artificial Conexionista",
+    "email": "tasinaffo@ita.br",
+    "lattes": "http://lattes.cnpq.br/7033644722201115",
+    "lattes_id": "7033644722201115",
+    "lattes_html": null
+  },
+  {
+    "name": "Vitor Venceslau Curtis",
+    "institution": "ITA",
+    "area": "Computação Paralela / Matemática Computacional",
+    "email": "curtis@ita.br",
+    "lattes": "http://lattes.cnpq.br/1785341067396776",
+    "lattes_id": "1785341067396776",
+    "lattes_html": null
+  },
+  {
+    "name": "Antônio Augusto Chaves",
+    "institution": "UNIFESP",
+    "area": "Metaheurísticas / Otimização",
+    "email": "antonio.chaves@unifesp.br",
+    "lattes": "http://lattes.cnpq.br/4973949421738244",
+    "lattes_id": "4973949421738244",
+    "lattes_html": null
+  },
+  {
+    "name": "Edson Luiz França Senne",
+    "institution": "UNIFESP",
+    "area": "Otimização Combinatória / Simulação",
+    "email": "edson.senne@unesp.br",
+    "lattes": "http://lattes.cnpq.br/1338008237590056",
+    "lattes_id": "1338008237590056",
+    "lattes_html": null
+  },
+  {
+    "name": "Horacio Hideki Yanasse",
+    "institution": "UNIFESP",
+    "area": "Pesquisa Operacional",
+    "email": "horacio.yanasse@unifesp.br",
+    "lattes": "http://lattes.cnpq.br/6187221670775160",
+    "lattes_id": "6187221670775160",
+    "lattes_html": null
+  },
+  {
+    "name": "Luiz Antonio Nogueira Lorena",
+    "institution": "UNIFESP",
+    "area": "Otimização / Metaheurísticas",
+    "email": "lorena@lac.inpe.br",
+    "lattes": "http://lattes.cnpq.br/7195702087655314",
+    "lattes_id": "7195702087655314",
+    "lattes_html": null
+  },
+  {
+    "name": "Luís Felipe Cesar da Rocha Bueno",
+    "institution": "UNIFESP",
+    "area": "Programação Matemática / Otimização",
+    "email": "l.bueno06@unifesp.br",
+    "lattes": "http://lattes.cnpq.br/0017683968952439",
+    "lattes_id": "0017683968952439",
+    "lattes_html": null
+  },
+  {
+    "name": "Luiz Leduino de Salles Neto",
+    "institution": "UNIFESP",
+    "area": "Logística / Otimização",
+    "email": "luiz.leduino@unifesp.br",
+    "lattes": "http://lattes.cnpq.br/3728820959678712",
+    "lattes_id": "3728820959678712",
+    "lattes_html": null
+  },
+  {
+    "name": "Mariá Cristina Vasconcelos Nascimento Rosset",
+    "institution": "ITA",
+    "area": "Teoria dos Grafos / Metaheurísticas",
+    "email": "maria.nascimento@gp.ita.br",
+    "lattes": "http://lattes.cnpq.br/1010810293243435",
+    "lattes_id": "1010810293243435",
+    "lattes_html": null
+  },
+  {
+    "name": "Mauricio Guilherme de Carvalho Resende",
+    "institution": "UNIFESP",
+    "area": "Metaheurísticas",
+    "email": "mresende@gmail.com",
+    "lattes": "http://lattes.cnpq.br/6235837317096398",
+    "lattes_id": "6235837317096398",
+    "lattes_html": null
+  },
+  {
+    "name": "Sanderson Lincohn Gonzaga de Oliveira",
+    "institution": "UNIFESP",
+    "area": "Otimização Combinatória / Teoria dos Grafos / Meta-heurísticas / Matemática Computacional",
+    "email": "sanderson.oliveira@unifesp.br",
+    "lattes": "http://lattes.cnpq.br/5174723144800716",
+    "lattes_id": "5174723144800716",
+    "lattes_html": null
+  },
+  {
+    "name": "Thiago Parente da Silveira",
+    "institution": "ITA",
+    "area": "Otimização",
+    "email": "thiago.silveira@gp.ita .br",
+    "lattes": "http://lattes.cnpq.br/8394858328168764",
+    "lattes_id": "8394858328168764",
+    "lattes_html": null
+  },
+  {
+    "name": "Vitor Venceslau Curtis",
+    "institution": "ITA",
+    "area": "Computação Paralela / Matemática Computacional",
+    "email": "curtis@ita.br",
+    "lattes": "http://lattes.cnpq.br/1785341067396776",
+    "lattes_id": "1785341067396776",
+    "lattes_html": null
+  },
+  {
+    "name": "Denise Beatriz Teixeira Pinto do Areal Ferrari",
+    "institution": "ITA",
+    "area": "Probabilidade e Estatística / Métodos Quantitativos",
+    "email": "denise@ita.br",
+    "lattes": "http://lattes.cnpq.br/2386080698503541",
+    "lattes_id": "2386080698503541",
+    "lattes_html": null
+  },
+  {
+    "name": "Jonatas Araujo de Almeida",
+    "institution": "UFPE",
+    "area": "Apoio à decisão",
+    "email": "jonatas.almeida@ufpe.br",
+    "lattes": "http://lattes.cnpq.br/9646312471341940",
+    "lattes_id": "9646312471341940",
+    "lattes_html": null
+  },
+  {
+    "name": "Luiz Leduino de Salles Neto",
+    "institution": "UNIFESP",
+    "area": "Logística / Otimização",
+    "email": "luiz.leduino@unifesp.br",
+    "lattes": "http://lattes.cnpq.br/3728820959678712",
+    "lattes_id": "3728820959678712",
+    "lattes_html": null
+  },
+  {
+    "name": "Marcelo Wilson Berbone Furlan Alves",
+    "institution": "ITA",
+    "area": "Análise Envoltória de Dados (DEA)/Modelagem de Equações Estruturais/Redes Neurais Artificiais",
+    "email": "marcelofurlan@ita.br",
+    "lattes": "http://lattes.cnpq.br/8164729366432029",
+    "lattes_id": "8164729366432029",
+    "lattes_html": null
+  },
+  {
+    "name": "Mischel Carmen Neyra Belderrain",
+    "institution": "ITA",
+    "area": "Métodos Multicritério",
+    "email": "carmen@ita.br",
+    "lattes": "http://lattes.cnpq.br/3574552458175171",
+    "lattes_id": "3574552458175171",
+    "lattes_html": null
+  },
+  {
+    "name": "Renato Cesar Sato",
+    "institution": "UNIFESP",
+    "area": "Microeconomia / Gestão Tecnológica",
+    "email": "rcsato@unifesp.br",
+    "lattes": "http://lattes.cnpq.br/6095929487408447",
+    "lattes_id": "6095929487408447",
+    "lattes_html": null
+  }
+]
