@@ -8,3 +8,14 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.env
