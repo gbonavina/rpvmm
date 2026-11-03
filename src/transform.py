@@ -20,8 +20,8 @@ SCOPUS_PATH = DATA_DIR / "scopus_fwci.csv"
 QUALIS_PATH = Path(__file__).resolve().parent.parent / "qualis_21-24.xlsx"
 ARTICLE_FIELDS = ["professor", "artigo", "doi", "citations", "fwci", "source", "qualis"]
 
-YEAR_MIN = 2025
-YEAR_MAX = 2028
+YEAR_MIN = 2021
+YEAR_MAX = 2024
 
 DOI_HREF_RE = re.compile(
     r"(?:https?://(?:dx\.)?doi\.org/)?(10\.\d{4,9}/[^\s\"'<>]+)",
