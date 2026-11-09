@@ -63,7 +63,10 @@ OUTPUT_CSV = Path(__file__).resolve().parents[2] / "data" / "materiais.csv"
 COLUMNS = ["autor", "material", "titulo", "ano", "assunto"]
 
 def _text(node) -> str:
-    return " ".join(node.get_text(" ", strip=True).split())
+    # O Sophia envolve os termos buscados (ex.: "da", "de" do nome do aluno) em
+    # elementos de destaque; separar os nós por espaço quebrava palavras
+    # ("mo de ls", "boun da ry"). Os espaços reais já estão nos nós de texto.
+    return " ".join(node.get_text("").split())
 
 def _results_marker(driver: webdriver.Firefox):
     try:

@@ -160,6 +160,29 @@ def qualis_of(source: str, by_title: dict[str, str]) -> str:
     return by_title.get(normalize_source(source), "")
 
 
+def load_qualis_issn(path: Path = QUALIS_PATH) -> dict[str, str]:
+    """Map ISSN (sem hífen) → melhor estrato Qualis 2021–2024."""
+    with warnings.catch_warnings():
+        warnings.filterwarnings("ignore", message="Workbook contains no default style")
+        wb = load_workbook(path, read_only=True, data_only=True)
+    by_issn: dict[str, str] = {}
+    for row in wb.active.iter_rows(min_row=2, max_row=500_000, max_col=4, values_only=True):
+        if not row or not row[0]:
+            continue
+        issn = str(row[0]).replace("-", "").strip().upper()
+        estrato = str(row[3] or "").strip().upper()
+        if estrato and (issn not in by_issn or _better_estrato(by_issn[issn], estrato)):
+            by_issn[issn] = estrato
+    wb.close()
+    return by_issn
+
+
+def qualis_de(source: str, issn: str, by_title: dict[str, str], by_issn: dict[str, str]) -> str:
+    """Qualis pelo ISSN (mais preciso) e, se não houver, pelo nome do periódico."""
+    chave = str(issn or "").replace("-", "").strip().upper()
+    return by_issn.get(chave, "") or (qualis_of(source, by_title) if source else "")
+
+
 def year_of(article: Tag) -> int | None:
     el = article.select_one('span.informacao-artigo[data-tipo-ordenacao="ano"]')
     if not el:

@@ -1,0 +1,197 @@
+pessoa,papel,scopus_id,nome_scopus,documentos,documentos_confirmando,aceito
+Ana Carolina Lorena,docente,7801325731,Ana Carolina Lorena,76,76,True
+Ana Carolina Lorena,docente,59410011600,Ana Carolina Lorena,2,2,True
+Antônio Augusto Chaves,docente,22933313500,Antônio Augusto Chaves,34,32,True
+Antônio Augusto Chaves,docente,57224006850,António Chaves,8,0,False
+Antônio Augusto Chaves,docente,57224684168,Antonio Chaves,6,0,False
+Antônio Augusto Chaves,docente,7102248791,Antonio Chaves,0,0,False
+Antônio Augusto Chaves,docente,59749109700,Antonio Chaves,0,0,False
+Antônio Augusto Chaves,docente,57200621045,Antonio Chaves,1,0,False
+Antônio Augusto Chaves,docente,7102248771,Antonio Chaves,0,0,False
+Carlos Henrique Costa Ribeiro,docente,15846941800,Carlos Henrique Costa Ribeiro,36,35,True
+Carlos Henrique Costa Ribeiro,docente,7201736513,Carlos Ribeiro,0,0,False
+Carlos Henrique Costa Ribeiro,docente,55989032800,Carlos Ribeiro,29,0,False
+Carlos Henrique Costa Ribeiro,docente,36642948400,Carlos Ribeiro,9,0,False
+Carlos Henrique Costa Ribeiro,docente,55328853100,Carlos Ribeiro,18,0,False
+Carlos Henrique Costa Ribeiro,docente,54885075500,Carlos Ribeiro,13,0,False
+Carlos Henrique Costa Ribeiro,docente,7201734544,Carlos Henrique Ribeiro,0,0,False
+Carlos Henrique Costa Ribeiro,docente,7201736466,Carlos Ribeiro,0,0,False
+Carlos Henrique Costa Ribeiro,docente,36879038300,Carlos Ribeiro,0,0,False
+Carlos Henrique Costa Ribeiro,docente,57206209215,Carlos Ribeiro,0,0,False
+Carlos Henrique Costa Ribeiro,docente,59465873200,Carlos Ribeiro,2,0,False
+Carlos Henrique Costa Ribeiro,docente,59420621900,Carlos Ribeiro,2,0,False
+Carlos Henrique Costa Ribeiro,docente,35622544100,Carlos Henrique Ribeiro,0,0,False
+Carlos Henrique Costa Ribeiro,docente,60015378000,Carlos Ribeiro,2,0,False
+Carlos Henrique Costa Ribeiro,docente,57202402153,Carlos Ribeiro,2,0,False
+Carlos Henrique Costa Ribeiro,docente,57218873193,Carlos Ribeiro,1,0,False
+Carlos Henrique Costa Ribeiro,docente,57214773040,Carlos Ribeiro,0,0,False
+Carlos Henrique Costa Ribeiro,docente,58973444800,Carlos Ribeiro,1,0,False
+Carlos Henrique Costa Ribeiro,docente,58709493100,Carlos Ribeiro,1,0,False
+Carlos Henrique Costa Ribeiro,docente,57192954441,Carlos Ribeiro,1,0,False
+Carlos Henrique Costa Ribeiro,docente,58535114100,Carlos Ribeiro,1,0,False
+Carlos Henrique Costa Ribeiro,docente,57206209225,Carlos Ribeiro,0,0,False
+Carlos Henrique Costa Ribeiro,docente,57197924022,Carlos Ribeiro,1,0,False
+Denise Beatriz Teixeira Pinto do Areal Ferrari,docente,39361456500,Denise Beatriz Ferrari,19,19,True
+Denise Beatriz Teixeira Pinto do Areal Ferrari,docente,59888901400,Denise Ferrari,0,0,False
+Denise Beatriz Teixeira Pinto do Areal Ferrari,docente,55973510900,Denise Ferrari,1,0,False
+Denise Beatriz Teixeira Pinto do Areal Ferrari,docente,57221266089,Denise Ferrari,1,0,False
+Elton Felipe Sbruzzi,docente,56132113500,Elton Felipe Sbruzzi,23,22,True
+Filipe Alves Neto Verri,docente,57163242600,Filipe Alves Neto Verri,40,33,True
+Filipe Alves Neto Verri,docente,60993736800,Filipe Alves Neto Verri,0,0,False
+Horacio Hideki Yanasse,docente,6603129513,Horacio Hideki Hideki Yanasse,16,16,True
+Jonatas Araujo de Almeida,docente,55936165400,Jônatas Araújo De Almeida,19,2,True
+Juliana Garcia Cespedes,docente,55656499000,Juliana Garcia Cespedes,10,10,True
+Luiz Antonio Nogueira Lorena,docente,26643022900,Luiz Antonio Nogueira Lorena,22,15,True
+Luiz Leduino de Salles Neto,docente,55830154400,Luiz Leduino Salles-Neto,30,30,True
+Luiz Leduino de Salles Neto,docente,57219548829,Luiz Neto,6,0,False
+Luiz Leduino de Salles Neto,docente,60619995100,Luiz S.L. Neto,0,0,False
+Luís Felipe Cesar da Rocha Bueno,docente,36112705000,Luís Felipe Bueno,13,13,True
+Luís Felipe Cesar da Rocha Bueno,docente,57217116895,Luis Bueno,5,0,False
+Luís Felipe Cesar da Rocha Bueno,docente,54381482400,Luís Bueno,3,0,False
+Luís Felipe Cesar da Rocha Bueno,docente,57219230218,Luis C. Bueno,3,0,False
+Marcelo Wilson Berbone Furlan Alves,docente,59998937100,Marcelo Alves,2,0,False
+Marcelo Wilson Berbone Furlan Alves,docente,55696579500,Marcelo Alves,0,0,False
+Marcelo Wilson Berbone Furlan Alves,docente,57212334960,Marcelo Alves,0,0,False
+Marcelo Wilson Berbone Furlan Alves,docente,57217035726,Marcelo Alves,1,0,False
+Marcelo Wilson Berbone Furlan Alves,docente,60784613100,Marcelo Wilson Berbone Furlan Alves,0,0,False
+Marcelo Wilson Berbone Furlan Alves,docente,57830311200,Marcelo Alves,1,0,False
+Mauri Aparecido de Oliveira,docente,36117490900,Mauri Aparecido de Oliveira,4,4,True
+Mauri Aparecido de Oliveira,docente,60199867500,Mauri A. Oliveira,0,0,False
+Mauricio Guilherme de Carvalho Resende,docente,57455625700,Maurício Resende,5,0,False
+Mauricio Guilherme de Carvalho Resende,docente,57091272300,Mauricio Resende,2,0,False
+Michel Carlo Rodrigues Leles,docente,57193958557,Michel Carlo Rodrigues Leles,26,18,True
+Mischel Carmen Neyra Belderrain,docente,36092581300,Mischel Carmen Neyra Belderrain,38,37,True
+Mischel Carmen Neyra Belderrain,docente,59604778200,Mischel Carmen Neyra Belderrain,2,2,True
+Paulo Andre Lima de Castro,docente,57902909700,Paulo Andre L. Castro,17,15,True
+Paulo Andre Lima de Castro,docente,38660891800,Paulo Castro,8,0,False
+Paulo Andre Lima de Castro,docente,7102781796,Paulo Castro,0,0,False
+Paulo Andre Lima de Castro,docente,59278198400,Paulo Castro,3,0,False
+Paulo Andre Lima de Castro,docente,58426467500,Paulo Castro,5,0,False
+Paulo Andre Lima de Castro,docente,59968567300,Paulo A. de Castro,0,0,False
+Paulo Andre Lima de Castro,docente,59127022700,Paulo Castro,0,0,False
+Paulo Andre Lima de Castro,docente,60165743000,Paulo Castro,1,0,False
+Paulo Andre Lima de Castro,docente,57220655145,Paulo Castro,0,0,False
+Paulo Andre Lima de Castro,docente,19533458000,Paulo Castro,0,0,False
+Paulo Andre Lima de Castro,docente,60684409700,Paulo Castro,0,0,False
+Paulo Andre Lima de Castro,docente,14051578700,Paulo Castro,0,0,False
+Paulo Andre Lima de Castro,docente,59793039100,Paulo Castro,0,0,False
+Paulo Andre Lima de Castro,docente,60969435000,Paulo Castro,0,0,False
+Paulo Andre Lima de Castro,docente,57207729081,Paulo Castro,1,0,False
+Paulo Andre Lima de Castro,docente,58093278800,Paulo Castro,1,0,False
+Renato Cesar Sato,docente,55462863400,Renato Cesar Sato,3,3,True
+Sanderson Lincohn Gonzaga de Oliveira,docente,60843590600,Sanderson L.Gonzaga de Oliveira,0,0,False
+Thiago Parente da Silveira,docente,57222147794,Thiago da Silveira,11,0,False
+Thiago Parente da Silveira,docente,56313424200,Thiago Silveira,6,0,False
+Thiago Parente da Silveira,docente,57216400163,Thiago P. Silveira,4,2,True
+Thiago Parente da Silveira,docente,61027392000,Thiago da Silveira,0,0,False
+Ana Paula dos Santos Gularte,titulado,58341163800,Ana Paula Dos Santos Gularte,1,1,True
+Antônio Augusto Rodrigues de Camargo,titulado,35087969200,Antonio Camargo,82,0,False
+Antônio Augusto Rodrigues de Camargo,titulado,7005065200,Antonio Camargo,0,0,False
+Antônio Augusto Rodrigues de Camargo,titulado,35999360000,Antonio Camargo,0,0,False
+Antônio Augusto Rodrigues de Camargo,titulado,58627393700,Antônio Augusto Rodrigues de Camargo,1,1,True
+Antônio Augusto Rodrigues de Camargo,titulado,35996466900,Antonio Camargo,0,0,False
+Bárbara Lessa Vianna,titulado,57219883573,Bárbara Lessa Vianna,1,1,True
+Bruna Cristina Braga Charytitsch,titulado,60085860500,Bruna Cristina Braga Charytitsch,1,0,False
+Bruna Dutra Puppo,titulado,57559800200,Bruna Puppo,1,1,True
+Bruna Helena Pedroso Fabrin,titulado,57484219200,Bruna H.P. Fabrin,7,7,True
+Bruno Lopes Salvadori,titulado,57190078667,Bruno Salvadori,0,0,False
+Calvin Rodrigues da Costa,titulado,57451816900,Calvin Rodrigues da Costa,6,6,True
+"Eduardo Állysson Alves Gonçalves Macêdo, Cap Eb",titulado,57191292206,Eduardo A. Macêdo,3,0,False
+"Eduardo Állysson Alves Gonçalves Macêdo, Cap Eb",titulado,58834005800,Eduardo Macedo,1,0,False
+"Eduardo Állysson Alves Gonçalves Macêdo, Cap Eb",titulado,57201337122,Eduardo Macedo,1,0,False
+Elaine Xavier Dias,titulado,57214184404,Elaine Dias,2,2,True
+Evelyn Michelle Henrique Braga,titulado,57832011300,Evelyn Michelle Henrique Braga,1,1,True
+Fabio Antero de Pulpa Melo Junior,titulado,15136033800,Fábio Junior,1,0,False
+Fausto Luiz Jorge Padua,titulado,59208835600,Fausto Luiz Jorge Pádua,1,1,True
+Felipe de Oliveira Simoyama,titulado,57327725500,Felipe De Oliveira Simoyama,6,5,True
+Flávio Augusto Barbosa Rodrigues,titulado,57211952146,Flávio Rodrigues,8,0,False
+Flávio Augusto Barbosa Rodrigues,titulado,36875555900,Flávio Rodrigues,4,1,False
+Flávio Augusto Barbosa Rodrigues,titulado,56313770500,Flávio Rodrigues,1,0,False
+Flávio Augusto Barbosa Rodrigues,titulado,57214538787,Flávio Rodrigues,2,0,False
+Flávio Augusto Barbosa Rodrigues,titulado,57197448311,Flávio Rodrigues,2,0,False
+Flávio Augusto Barbosa Rodrigues,titulado,57221835268,Flávio Rodrigues,2,0,False
+Flávio Augusto Barbosa Rodrigues,titulado,55013066400,Flávio Rodrigues,0,0,False
+Flávio Augusto Barbosa Rodrigues,titulado,57221493102,Flavio Rodrigues,1,0,False
+Flávio Augusto Barbosa Rodrigues,titulado,59967775200,Flávio Rodrigues,1,0,False
+Gabriela Martins Nunes,titulado,60346902400,Gabriela M. Nunes,1,0,False
+Gabriela Martins Nunes,titulado,57202968420,Gabriela Martins Nunes,1,0,False
+Guilherme Palazzo,titulado,58313286400,Guilherme Palazzo,2,2,True
+Gustavo Barbi Vieira,titulado,23986561600,Gustavo Vieira,0,0,False
+Gustavo Barbi Vieira,titulado,60165931400,Gustavo Vieira,2,0,False
+Gustavo Barbi Vieira,titulado,57682301800,Gustavo Vieira,2,0,False
+Gustavo Barbi Vieira,titulado,58802734700,Gustavo Barbi Vieira,2,2,True
+Gustavo Barbi Vieira,titulado,57221831306,Gustavo Vieira,2,0,False
+Gustavo Barbi Vieira,titulado,57203354595,Gustavo Vieira,1,0,False
+Gustavo Barbi Vieira,titulado,60625126500,Gustavo Vieira,0,0,False
+Gustavo Barbi Vieira,titulado,58091428700,Gustavo Vieira,1,0,False
+Gustavo Barbi Vieira,titulado,60449401200,Gustavo Vieira,0,0,False
+Gustavo Barbi Vieira,titulado,7005863965,Gustavo B. Vieira,0,0,False
+Gustavo Barbi Vieira,titulado,57529811000,Gustavo Vieira,1,0,False
+Gustavo Barbi Vieira,titulado,57197320008,Gustavo Vieira,0,0,False
+Jeferson Auto da Cruz,titulado,58891686600,Jeferson Auto Da Cruz,2,2,True
+João Pedro Pinheiro Malere,titulado,55905570400,João Pedro Pinheiro Malere,8,4,True
+João Pedro Pinheiro Malere,titulado,59704871100,Joao Pedro Pinheiro Malere,0,0,False
+Leila Abuabara,titulado,57194010737,Leila Abuabara,7,7,True
+Luiz Henrique dos Santos Fernandes,titulado,57222613390,Luiz Henrique Dos Santos Fernandes,3,3,True
+Luiz Henrique dos Santos Fernandes,titulado,56196102200,Luiz Henrique Fernandes,1,0,False
+Luiz Henrique dos Santos Fernandes,titulado,57205467355,Luiz Fernandes,1,0,False
+Luiz Henrique dos Santos Fernandes,titulado,57811271600,Luiz Fernandes,1,0,False
+Marcus Vinícius Gomes Pereira,titulado,37091248200,Marcus Vinicius Pereira,4,0,False
+Marcus Vinícius Gomes Pereira,titulado,57208385761,Marcus Vinicius Pereira,7,0,False
+Marcus Vinícius Gomes Pereira,titulado,57217060412,Marcus Vinicius Pereira,4,3,True
+Marcus Vinícius Gomes Pereira,titulado,57214855015,Marcus Vinicius Pereira,2,1,True
+Marcus Vinícius Gomes Pereira,titulado,60041463100,Marcus Pereira,1,0,False
+Marcus Vinícius Gomes Pereira,titulado,60968363800,Marcus Pereira,0,0,False
+Marcus Vinícius Gomes Pereira,titulado,59824264200,Marcus Pereira,1,0,False
+Marcus Vinícius Gomes Pereira,titulado,58609310300,Marcus Vinicius Gomes Pereira,1,1,True
+Marcus Vinícius Gomes Pereira,titulado,59825180800,Marcus Pereira,1,0,False
+Marcus Vinícius Gomes Pereira,titulado,57205692696,Marcus Vinicius Pereira,1,0,False
+Maria Gabriela Valeriano,titulado,57289525300,Maria Gabriela Valeriano,10,9,True
+Marlon Jeske,titulado,57217137481,Marlon Jeske,3,3,True
+Mauro Guilherme Gazola Barros da Silva,titulado,59038658100,Mauro Silva,0,0,False
+Mauro Guilherme Gazola Barros da Silva,titulado,55541823500,Mauro G. da Silva,1,0,False
+Mauro Guilherme Gazola Barros da Silva,titulado,60107126500,Mauro Silva,2,0,False
+Mauro Guilherme Gazola Barros da Silva,titulado,57206609964,Mauro Silva,2,0,False
+Mauro Guilherme Gazola Barros da Silva,titulado,57222134107,Mauro Silva,1,0,False
+Mauro Guilherme Gazola Barros da Silva,titulado,59615389300,Mauro B. Silva,0,0,False
+Mauro Guilherme Gazola Barros da Silva,titulado,60663020500,Mauro Silva,1,0,False
+Mauro Guilherme Gazola Barros da Silva,titulado,57213772857,Mauro Silva,1,0,False
+Mauro Guilherme Gazola Barros da Silva,titulado,57190276655,Mauro Silva,1,0,False
+Mauro Guilherme Gazola Barros da Silva,titulado,58096762100,Mauro E. Silva,1,0,False
+Mauro Guilherme Gazola Barros da Silva,titulado,55467632500,Mauro Silva,0,0,False
+Mauro Guilherme Gazola Barros da Silva,titulado,57216225609,Mauro Silva,0,0,False
+Mauro Guilherme Gazola Barros da Silva,titulado,55851684400,Mauro G. Silva,0,0,False
+Mauro Guilherme Gazola Barros da Silva,titulado,57816753700,Mauro Silva,1,0,False
+Rafaela Veloso de Oliveira,titulado,56248270600,Rafaela Oliveira,7,0,False
+Rafaela Veloso de Oliveira,titulado,57958190000,Rafaela de Oliveira,4,0,False
+Rafaela Veloso de Oliveira,titulado,58719532800,Rafaela Oliveira,2,0,False
+Rafaela Veloso de Oliveira,titulado,60156059400,Rafaela Oliveira,1,0,False
+Rafaela Veloso de Oliveira,titulado,58654611800,Rafaela Oliveira,1,0,False
+Rafaela Veloso de Oliveira,titulado,57204693692,Rafaela Oliveira,1,0,False
+Rafaela Veloso de Oliveira,titulado,57191536172,Rafaela de Oliveira,1,0,False
+Rafaela Veloso de Oliveira,titulado,59187089000,Rafaela De Oliveira,1,0,False
+Rafaela Veloso de Oliveira,titulado,59797423300,Rafaela Oliveira,0,0,False
+Rafaela Veloso de Oliveira,titulado,57241067100,Rafaela de Oliveira,1,0,False
+Renan Brito Cano Butkeraites,titulado,57215143724,Renan Brito Cano Butkeraites,3,3,True
+Roberto Douglas Guimarães de Aquino,titulado,58684366700,Roberto Douglas Guimarães de Aquino,5,5,True
+Roberto Douglas Guimarães de Aquino,titulado,57201365688,Roberto D. Aquino,2,0,False
+"Thiago Rezende Paiva, Cap",titulado,57222103732,Thiago de Paiva,7,0,False
+"Thiago Rezende Paiva, Cap",titulado,59233018900,Thiago Paiva,1,0,False
+"Thiago Rezende Paiva, Cap",titulado,59406920300,Thiago Paiva,1,1,True
+Thiago Siqueira Santos,titulado,54968468100,Thiago Santos,11,0,False
+Thiago Siqueira Santos,titulado,57193520926,Thiago Dos Santos,15,1,False
+Thiago Siqueira Santos,titulado,57456658600,Thiago Santos,4,0,False
+Thiago Siqueira Santos,titulado,57304831700,Thiago Dos Santos,2,0,False
+Thiago Siqueira Santos,titulado,59538842400,Thiago Dos Santos,2,0,False
+Thiago Siqueira Santos,titulado,57216864106,Thiago S. Santos,3,0,False
+Thiago Siqueira Santos,titulado,57196507751,Thiago Santos,0,0,False
+Thiago Siqueira Santos,titulado,55605967000,Thiago S. Santos,0,0,False
+Thiago Siqueira Santos,titulado,58412362800,Thiago Santos,2,0,False
+Thiago Siqueira Santos,titulado,36712558100,Thiago Santos,0,0,False
+Thiago Siqueira Santos,titulado,58710277800,Thiago Santos,2,0,False
+Thiago Siqueira Santos,titulado,57210460541,Thiago Santos,1,0,False
+Thiago Siqueira Santos,titulado,58603650300,Thiago Santos,1,0,False
+Thiago Siqueira Santos,titulado,57196507770,Thiago Santos,0,0,False
+Thiago Siqueira Santos,titulado,57209970361,Thiago Santos,1,0,False
+Thiago Siqueira Santos,titulado,57964210700,Thiago Dos Santos,1,0,False
+Ygor Logullo de Souza,titulado,59757570800,Ygor Souza,1,0,False
