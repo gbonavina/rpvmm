@@ -7,6 +7,7 @@ from selenium.common.exceptions import TimeoutException
 from bs4 import BeautifulSoup
 
 import pandas as pd
+import requests
 
 import json
 import re
@@ -60,7 +61,12 @@ def _quick_search_box(driver: webdriver.Firefox):
         return False
 
 OUTPUT_CSV = Path(__file__).resolve().parents[2] / "data" / "materiais.csv"
-COLUMNS = ["autor", "material", "titulo", "ano", "assunto"]
+COLUMNS = ["autor", "material", "titulo", "ano", "assunto", "codigo_obra", "resumo"]
+
+DETAIL_URL = "http://www.sophia.bibl.ita.br/biblioteca/index.asp"
+# href do título: javascript:LinkDetalhes(parent.hiddenFrame.modo_busca,1,0,80346,1,'resultado',1);
+# o 4º argumento é o codigo_obra usado pela página de detalhes.
+LINK_DETALHES = re.compile(r"LinkDetalhes\([^,]+,\s*\d+\s*,\s*\d+\s*,\s*(\d+)")
 
 def _text(node) -> str:
     # O Sophia envolve os termos buscados (ex.: "da", "de" do nome do aluno) em
@@ -112,14 +118,49 @@ def _extract_results(html: str, autor: str) -> list[dict]:
         else:
             links = assunto_cell.select("a.link_custom")
             assunto = "; ".join(_text(link) for link in links) if links else _text(assunto_cell)
+        link = fields["Título"].select_one("a.link_custom_negrito")
+        match = LINK_DETALHES.search(link.get("href", "")) if link else None
         rows.append({
             "autor": autor,
             "material": _text(fields["Material"]) if "Material" in fields else "",
             "titulo": _text(fields["Título"]),
             "ano": _text(fields["Ano"]) if "Ano" in fields else "",
             "assunto": assunto,
+            "codigo_obra": match.group(1) if match else "",
+            "resumo": "",
         })
     return rows
+
+def fetch_abstract(codigo_obra: str, session: requests.Session | None = None) -> str:
+    """Texto do campo "Resumo" da página de detalhes da obra no Sophia.
+
+    Equivale a clicar no título nos resultados: a página de detalhes abre por
+    GET direto, sem precisar da sessão do Selenium.
+    """
+    if not codigo_obra:
+        return ""
+    http = session or requests
+    response = http.get(
+        DETAIL_URL,
+        params={
+            "modo_busca": "rapida",
+            "content": "detalhe",
+            "codigo_obra": codigo_obra,
+            "tipo_obra": 1,
+            "Servidor": 1,
+        },
+        headers={"User-Agent": "Mozilla/5.0"},
+        timeout=30,
+    )
+    response.raise_for_status()
+    soup = BeautifulSoup(response.content, "html.parser")
+    for label in soup.select("td.td_detalhe_descricao_recuo, td.td_detalhe_descricao"):
+        if label.get_text(strip=True).replace("\xa0", "") != "Resumo":
+            continue
+        value = label.find_next_sibling("td", class_="td_detalhe_valor")
+        if value is not None:
+            return " ".join(value.get_text(" ").split())
+    return ""
 
 def _page_number(driver: webdriver.Firefox) -> str:
     try:
@@ -166,6 +207,14 @@ def search_student(driver: webdriver.Firefox, *, student: pd.Series) -> list[dic
                 break
         except TimeoutException:
             break
+
+    with requests.Session() as session:
+        for row in rows:
+            try:
+                row["resumo"] = fetch_abstract(row["codigo_obra"], session)
+            except requests.RequestException as error:
+                print(f"  resumo de {row['codigo_obra']} falhou: {error}")
+            time.sleep(0.5)
     return rows
 
 def write_materials(rows: list[dict]) -> None:

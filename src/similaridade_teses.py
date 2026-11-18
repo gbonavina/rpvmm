@@ -9,9 +9,15 @@ O texto do artigo é o título seguido do resumo (`resumo_scopus`) quando ele
 existe; a coluna `usa_resumo` indica cada caso. Também é gravada a
 similaridade só com o título (`cosine_similarity_titulo`) para comparação.
 
+Do lado da tese, `cosine_similarity` usa só o título (abordagem original) e
+`cosine_similarity_resumo_tese` usa título + resumo do Sophia
+(`data/materiais.csv`, coluna `resumo`). O modelo é só de inglês, então teses
+em português usam a tradução de `data/traducoes_teses.csv` (título e resumo,
+por `codigo_obra`); `usa_resumo_tese` indica se a tese tinha resumo.
+
 Uso (na raiz do projeto):
     uv run python src/similaridade_teses.py \
-        --artigos resultados_2021_2024/alunos_artigos_scival_2021_2024_com_fwci.csv \
+        --artigos resultados_2021_2024/alunos_artigos_2021_2024_final.csv \
         --saida resultados_2021_2024/thesis_articles_similarity_2021_2024.csv
 """
 
@@ -27,6 +33,7 @@ import pandas as pd
 
 RAIZ = Path(__file__).resolve().parent.parent
 MATERIAIS = RAIZ / "data" / "materiais.csv"
+TRADUCOES = RAIZ / "data" / "traducoes_teses.csv"
 MODELO = "sentence-transformers/all-MiniLM-L6-v2"
 
 CONECTORES = {"da", "das", "de", "do", "dos", "e"}
@@ -34,8 +41,12 @@ CONECTORES = {"da", "das", "de", "do", "dos", "e"}
 SUFIXOS = {"cap", "eb", "ten", "maj", "cel"}
 COLUNAS_SAIDA = [
     "autor", "material", "titulo", "ano", "artigo", "doi", "ano_publicacao_scopus",
-    "primeiro_autor", "usa_resumo", "cosine_similarity", "cosine_similarity_titulo",
+    "primeiro_autor", "usa_resumo", "usa_resumo_tese", "traduzida",
+    "cosine_similarity", "cosine_similarity_titulo", "cosine_similarity_resumo_tese",
 ]
+# Palavras frequentes em português e raras em inglês, para avisar sobre teses
+# pareadas que ainda não têm tradução.
+PALAVRAS_PT = {"de", "da", "do", "dos", "das", "que", "para", "uma", "com", "não", "são", "foi", "este", "neste"}
 
 
 def chave_nome(valor: object) -> str:
@@ -71,13 +82,42 @@ def nivel_do_material(material: object) -> str:
     return "tese" if normalizar_material(material).startswith("tese") else "dissertacao"
 
 
-def carregar_teses(caminho: Path = MATERIAIS) -> pd.DataFrame:
-    teses = pd.read_csv(caminho)
+def parece_portugues(texto: object) -> bool:
+    palavras = re.findall(r"\w+", str(texto or "").casefold())
+    return bool(palavras) and sum(p in PALAVRAS_PT for p in palavras) / len(palavras) > 0.08
+
+
+def carregar_teses(caminho: Path = MATERIAIS, traducoes: Path = TRADUCOES) -> pd.DataFrame:
+    teses = pd.read_csv(caminho, dtype={"codigo_obra": str})
     teses = teses[teses["material"].map(eh_pos_graduacao)].copy()
     teses["author_key"] = teses["autor"].map(chave_nome)
     teses["nivel"] = teses["material"].map(nivel_do_material)
+    for coluna in ("codigo_obra", "resumo"):
+        if coluna not in teses.columns:
+            teses[coluna] = ""
+    teses["resumo"] = teses["resumo"].fillna("").astype(str).str.strip()
+    teses["codigo_obra"] = teses["codigo_obra"].fillna("")
+
+    teses["titulo_en"] = teses["titulo"]
+    teses["resumo_en"] = teses["resumo"]
+    teses["traduzida"] = False
+    if traducoes.exists():
+        trad = pd.read_csv(traducoes, dtype=str).fillna("").set_index("codigo_obra")
+        alvo = teses["codigo_obra"].isin(trad.index)
+        codigos = teses.loc[alvo, "codigo_obra"]
+        teses.loc[alvo, "titulo_en"] = codigos.map(trad["titulo_en"]).replace("", np.nan).fillna(teses.loc[alvo, "titulo"])
+        teses.loc[alvo, "resumo_en"] = codigos.map(trad["resumo_en"]).replace("", np.nan).fillna(teses.loc[alvo, "resumo"])
+        teses.loc[alvo, "traduzida"] = True
+
+    teses["usa_resumo_tese"] = teses["resumo_en"].ne("")
+    teses["texto_tese"] = [
+        texto_artigo(t, r) for t, r in zip(teses["titulo_en"], teses["resumo_en"])
+    ]
     return (
-        teses.loc[:, ["autor", "author_key", "material", "nivel", "titulo", "ano"]]
+        teses.loc[:, [
+            "autor", "author_key", "material", "nivel", "titulo", "ano", "codigo_obra",
+            "titulo_en", "traduzida", "usa_resumo_tese", "texto_tese",
+        ]]
         .drop_duplicates(subset=["author_key", "titulo"])
         .reset_index(drop=True)
     )
@@ -150,6 +190,7 @@ def calcular_similaridade(artigos: pd.DataFrame, teses: pd.DataFrame, modelo=Non
         return modelo.encode(textos, normalize_embeddings=True)
 
     v_tese = codificar(teses["titulo"].tolist())
+    v_tese_texto = codificar(teses["texto_tese"].tolist())
     v_artigo = codificar(artigos["texto"].tolist())
     v_titulo = codificar(artigos["artigo"].astype(str).tolist())
 
@@ -157,12 +198,19 @@ def calcular_similaridade(artigos: pd.DataFrame, teses: pd.DataFrame, modelo=Non
     idx_a = pares["article_idx"].to_numpy()
     pares["cosine_similarity"] = np.sum(v_tese[idx_t] * v_artigo[idx_a], axis=1)
     pares["cosine_similarity_titulo"] = np.sum(v_tese[idx_t] * v_titulo[idx_a], axis=1)
+    pares["cosine_similarity_resumo_tese"] = np.sum(v_tese_texto[idx_t] * v_artigo[idx_a], axis=1)
 
     return (
         pares.loc[:, COLUNAS_SAIDA]
         .sort_values(["autor", "cosine_similarity"], ascending=[True, False])
         .reset_index(drop=True)
     )
+
+
+def teses_sem_traducao(similaridade: pd.DataFrame, teses: pd.DataFrame) -> pd.DataFrame:
+    """Teses pareadas com artigos cujo texto ainda parece estar em português."""
+    pareadas = teses[teses["titulo"].isin(similaridade["titulo"]) & ~teses["traduzida"]]
+    return pareadas[pareadas["texto_tese"].map(parece_portugues)]
 
 
 def autores_sem_tese(artigos: pd.DataFrame) -> list[str]:
@@ -174,9 +222,10 @@ def main() -> None:
     parser.add_argument("--artigos", type=Path, required=True, help="CSV aluno × artigo (alunos_artigos_scival*).")
     parser.add_argument("--saida", type=Path, required=True, help="CSV de saída com as similaridades.")
     parser.add_argument("--teses", type=Path, default=MATERIAIS, help="Tabela de teses (padrão: data/materiais.csv).")
+    parser.add_argument("--traducoes", type=Path, default=TRADUCOES, help="Traduções de teses (padrão: data/traducoes_teses.csv).")
     args = parser.parse_args()
 
-    teses = carregar_teses(args.teses)
+    teses = carregar_teses(args.teses, args.traducoes)
     artigos = carregar_artigos(args.artigos, teses)
     similaridade = calcular_similaridade(artigos, teses)
     args.saida.parent.mkdir(parents=True, exist_ok=True)
@@ -185,6 +234,10 @@ def main() -> None:
     com_resumo = int(artigos["usa_resumo"].sum())
     print(f"{len(similaridade)} pares tese × artigo gravados em {args.saida}")
     print(f"Artigos com resumo: {com_resumo} de {len(artigos)}")
+    sem_traducao = teses_sem_traducao(similaridade, teses)
+    if not sem_traducao.empty:
+        print("Teses pareadas em português sem tradução em "
+              f"{args.traducoes.name}: {', '.join(sem_traducao['codigo_obra'])}")
     faltantes = autores_sem_tese(artigos)
     if faltantes:
         print(f"Alunos sem tese/dissertação em {args.teses.name}: {', '.join(faltantes)}")
